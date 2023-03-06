@@ -14,10 +14,10 @@ class Dinosaur(Sprite):
       self.step = 0
 
     def update(self, user_input):
-        if user_input[pygame.K_DOWN]:
-          self.duck
+        if user_input[pygame.K_SPACE]:
+          self.duck()
         elif user_input[pygame.K_UP]:
-          self.jump
+          self.jump()
         else:
           self.run()
 
