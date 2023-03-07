@@ -29,9 +29,10 @@ class Dinosaur(Sprite):
           self.dino_jump = True
 
     def update(self, user_input):
-        if user_input[pygame.K_SPACE]:
+        self.process_event(user_input)
+        if self.dino_drunk:
           self.duck()
-        elif user_input[pygame.K_UP]:
+        elif self.dino_jump:
           self.jump()
         else:
           self.run()
