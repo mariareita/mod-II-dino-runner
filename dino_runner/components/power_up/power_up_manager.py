@@ -2,7 +2,7 @@ import random
 from dino_runner.components.power_up.hammer import Hammer
 from dino_runner.components.power_up.heart import Heart
 from dino_runner.components.power_up.shield import Shield
-from dino_runner.utils.constants import DEFAULT_TYPE, HAMMER, HEART, SHIELD
+from dino_runner.utils.constants import DEFAULT_TYPE, HAMMER, HEART, SCREEN_HEIGHT, SCREEN_WIDTH, SHIELD
 
 
 class PowerUpManager:

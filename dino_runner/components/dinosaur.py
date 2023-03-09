@@ -61,7 +61,7 @@ class Dinosaur(Sprite):
         self.dino_rect.y = self.Y_POS
 
     def duck(self):
-        self.image = self.duck_img[self.type][0] if self.step_index < 5 else self.run_img[self.type][1]
+        self.image = self.duck_img[self.type][0] if self.step_index < 5 else self.duck_img[self.type][1]
         self.dino_rect = self.image.get_rect()
         self.dino_rect.x = self.X_POS
         self.dino_rect.y = self.Y_POS + 35
@@ -81,9 +81,10 @@ class Dinosaur(Sprite):
        self.image = DEAD
 
     def activate_power_up(self, power_up_time):
-       if power_up_time == SHIELD_TYPE:
-          self.type = SHIELD_TYPE
-          self.power_up_time = self.POWER_UP_TIME
-       elif power_up_time == HAMMER_TYPE:
+       if power_up_time == HAMMER_TYPE:
           self.type = HAMMER_TYPE
+          self.power_up_time = self.POWER_UP_TIME
+
+       elif power_up_time == SHIELD_TYPE:
+          self.type = SHIELD_TYPE
           self.power_up_time = self.POWER_UP_TIME
