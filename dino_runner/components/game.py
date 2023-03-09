@@ -38,6 +38,7 @@ class Game:
     def show_menu(self):
         self.screen.fill((255, 255, 255))
         if self.deaths == 0:
+            self.screen.blit(ICON, (360, 225))
             home, home_rect = get_home_message('START')
             self.screen.blit(home, home_rect)
         elif self.deaths > 0:  
